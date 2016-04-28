@@ -11,10 +11,11 @@
 * Setup your environment.txt file in /srv/jasperserver/environment.txt
 
 ```
-  MYSQL_HOST=servername
-  MYSQL_USERNAME=mysqluser
-  MYSQL_PASSWORD=somethingsecretandrandom
-  MYSQL_PORT=3306
+  SQLDB_TYPE=postgres
+  SQLDB_HOST=localhost
+  SQLDB_USERNAME=postgres
+  SQLDB_PASSWORD=password
+  SQLDB_PORT=5432
 ```
 
 * Execute the run command going to a bash shell:
@@ -26,9 +27,9 @@
     --env-file=/srv/jasperserver/environment.txt \
     --volume=/srv/jasperserver/webapp:/var/lib/tomcat7/webapps \
     --volume=/srv/jasperserver/jasperreports-server-cp-5.6.1-bin:/data \
-    --link mysql:mysql \
+    --link postgis:postgis \
     --publish=8080:8080 \
-    xforty/jasperserver \
+    gael4imatia/jasperserver \
     bash -l
 ```
 
@@ -50,7 +51,7 @@
     --volume=/srv/jasperserver/webapp:/var/lib/tomcat7/webapps \
     --volume=/srv/jasperserver/jasperreports-server-cp-5.6.1-bin:/data \
     --publish=8080:8080 \
-    xforty/jasperserver
+    gael4imatia/jasperserver
 ```
 
 
