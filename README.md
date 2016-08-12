@@ -29,7 +29,7 @@
     --volume=/srv/jasperserver/jasperreports-server-cp-5.6.1-bin:/data \
     --link postgis:postgis \
     --publish=8080:8080 \
-    gael4imatia/jasperserver \
+    imatia/jasperserver \
     bash -l
 ```
 
@@ -51,7 +51,7 @@
     --volume=/srv/jasperserver/webapp:/var/lib/tomcat7/webapps \
     --volume=/srv/jasperserver/jasperreports-server-cp-5.6.1-bin:/data \
     --publish=8080:8080 \
-    gael4imatia/jasperserver
+    imatia/jasperserver
 ```
 
 
